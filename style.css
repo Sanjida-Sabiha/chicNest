@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@keyframes slow-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .slow-spin {
+    animation: slow-spin 10s linear infinite; /* Adjust the duration for speed */
+  }
+
+
+  .menu li {}
+  
+  .menu a {
+    padding: .2em .5em;
+    color: #331305;
+    position: relative;
+  }
+  
+  .menu a::before,
+  .menu a::after {
+    content: '';
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+  
+  .menu a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 5px solid #FF6803;
+    border-right: 5px solid #FF6803;
+    transform: translate(-100%, 50%);
+    transition: all ease .5s;
+  }
+  
+  .menu a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 5px solid #ff6803d7;
+    border-left: 5px solid #ff6803db;
+    transform: translate(100%, -50%);
+    transition: all ease .5s;
+  }
+  
+  .menu a:hover:before,
+  .menu a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+  .menu a:hover {
+    color: #FF6803;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
